@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_light"
+    tools:context=".MainActivity">
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:id="@+id/pink_card"
+        app:cardBackgroundColor="@android:color/holo_blue_dark"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sos_textview"
+        android:text="@string/sos"
+        app:layout_constraintStart_toStartOf="@id/pink_card"
+        app:layout_constraintTop_toTopOf="@+id/pink_card"
+        android:elevation="20dp"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_margin="22dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/emergency_textview"
+        android:text="@string/emergency"
+        app:layout_constraintStart_toStartOf="@id/pink_card"
+        app:layout_constraintTop_toBottomOf="@+id/sos_textview"
+        android:elevation="20dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginLeft="22dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/image_greencard"
+        app:layout_constraintEnd_toEndOf="@id/pink_card"
+        app:layout_constraintTop_toTopOf="@id/pink_card"
+        android:src="@drawable/green_card_pic"
+        android:elevation="20dp"
+        android:layout_marginRight="10dp"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:id="@+id/green_card"
+        app:cardBackgroundColor="@android:color/holo_blue_dark"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pink_card"
+        android:layout_margin="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guard_textview"
+        android:text="@string/guard"
+        app:layout_constraintStart_toStartOf="@id/green_card"
+        app:layout_constraintTop_toTopOf="@+id/green_card"
+        android:elevation="20dp"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_margin="22dp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pinkemeregency_textview"
+        android:text="@string/emergency"
+        app:layout_constraintStart_toStartOf="@id/green_card"
+        app:layout_constraintTop_toBottomOf="@+id/guard_textview"
+        android:elevation="20dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginLeft="22dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/image_pinkCard"
+        app:layout_constraintEnd_toEndOf="@id/green_card"
+        app:layout_constraintTop_toTopOf="@id/green_card"
+        android:src="@drawable/green_card_pic"
+        android:elevation="20dp"
+        android:layout_marginRight="10dp"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#004d40"
+        app:menu="@menu/menu_items"
+        tools:ignore="BottomAppBar" />
+</androidx.constraintlayout.widget.ConstraintLayout>
